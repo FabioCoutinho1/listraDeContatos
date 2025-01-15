@@ -1,0 +1,111 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: darkgray;
+    font-family: Arial, Helvetica, sans-serif;
+
+    width: 100dvw;
+    height: 100dvh;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+main {
+    background-color: lightgray;
+
+    width: 75%;
+    height: 60%;
+
+    padding: 15px;
+    border-radius: 10px;
+}
+
+header {
+    background-color: white;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    border-radius: 10px;
+    padding: 10px;
+
+    margin-bottom: 20px;
+}
+
+.botao_add {
+    background-color: #44E160;
+    color: white;
+    font-weight: bold;
+    font-size: 25px;
+
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+}
+
+section {
+    background-color: white;
+    padding: 10px;
+    border-radius: 10px;
+}
+
+.contatos {
+    background-color: lightgray;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.botoes{
+    display: flex;
+    align-items: center;
+    gap: 45px;
+}
+
+.botoes button {
+
+    background-color: rgba(0, 0, 0, 0);
+    border: none;
+
+}
+
+.deletar span{
+    color: red;
+}
+
+.editar span{
+    color: white;
+}
+
+/* padroes */
+
+button {
+    cursor: pointer;
+    transition: all .5s;
+}
+
+button:hover{
+    transform: scale(1.1);
+}
+
+
+span.material-symbols-outlined {
+    font-size: 40px;
+
+    font-variation-settings:
+        'FILL' 10,
+        'wght' 700,
+        'GRAD' 0,
+        'OPSZ' 40;
+}
