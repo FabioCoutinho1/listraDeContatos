@@ -22,6 +22,8 @@ main {
     width: 75%;
     height: 60%;
 
+    max-width: 1100px;
+
     padding: 15px;
     border-radius: 10px;
 }
@@ -50,6 +52,86 @@ header {
     padding: 15px;
 }
 
+dialog::backdrop {
+    background-color: rgba(0, 0, 0, 0.582);
+}
+
+dialog {
+    margin: auto;
+    padding: 15px;
+    border: none;
+    border-radius: 10px;
+
+    opacity: 0;
+    transform: translateX(-100px);
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+dialog[open] {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+.caixa_modal {
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.caixa_modal form {
+    flex: 1;
+}
+
+dialog form div {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+dialog form div input {
+    padding: 10px;
+    border-radius: 10px;
+    border: 1px solid #D9D9D9;
+    margin-top: 5px;
+
+    font-size: 20px;
+}
+
+div label{
+    font-size: 20px;
+}
+
+.botoes_modal {
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 0;
+    gap: 200px;
+}
+
+.botoes_modal button {
+    height: 50px;
+    width: 144px;
+
+    font-weight: bolder;
+    font-size: 20px;
+
+    border: none;
+    border-radius: 10px;
+}
+
+.botoes_modal .botao_cancelar {
+    background-color: red;
+    color: white;
+
+}
+
+.botoes_modal .salvar {
+    background-color: #44E160;
+    color: white;
+}
+
 section {
     background-color: white;
     padding: 10px;
@@ -57,17 +139,15 @@ section {
 }
 
 .contatos {
-    background-color: lightgray;
-
     display: flex;
     align-items: center;
     justify-content: space-between;
 
     padding: 15px;
-    border-radius: 10px;
+    border-bottom: 2px solid lightgray;
 }
 
-.botoes{
+.botoes {
     display: flex;
     align-items: center;
     gap: 45px;
@@ -80,12 +160,8 @@ section {
 
 }
 
-.deletar span{
+.deletar span {
     color: red;
-}
-
-.editar span{
-    color: white;
 }
 
 /* padroes */
@@ -95,7 +171,7 @@ button {
     transition: all .5s;
 }
 
-button:hover{
+button:hover {
     transform: scale(1.1);
 }
 

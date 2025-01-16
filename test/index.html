@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Dialog com Animação</title>
+  <style>
+    /* Estilo do dialog */
+    dialog {
+      opacity: 0;
+      transition: opacity 0.5s ease-in-out;
+    }
+
+    /* Animação para quando o dialog for aberto */
+    dialog[open] {
+      opacity: 1;
+    }
+
+    /* Botão */
+    button {
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+
+  <button id="openDialog">Abrir Dialog</button>
+
+  <dialog id="myDialog">
+    <p>Este é um dialog com animação!</p>
+    <button id="closeDialog">Fechar</button>
+  </dialog>
+
+  <script>
+    // Selecionando o botão e o dialog
+    const openButton = document.getElementById('openDialog');
+    const closeButton = document.getElementById('closeDialog');
+    const dialog = document.getElementById('myDialog');
+
+    // Abrir o dialog com animação
+    openButton.addEventListener('click', () => {
+      dialog.showModal();
+    });
+
+    // Fechar o dialog
+    closeButton.addEventListener('click', () => {
+      dialog.close();
+    });
+  </script>
+
+</body>
+</html>
