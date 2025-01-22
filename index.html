@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="style.css">
     <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined" rel="stylesheet" />
     <script src="/js/animacoes.js" defer></script>
+    <script src="/js/script.js" defer></script>
     <title>Lista de Contatos</title>
 </head>
 
@@ -30,12 +31,8 @@
                         <input type="text" id="i_area" name="area" placeholder="Ex:Brasil" required>
                     </div>
                     <div>
-                        <label for="nome">Nome</label>
-                        <input type="text" id="i_nome" name="nome" placeholder="Ex:Fabio" required>
-                    </div>
-                    <div>
                         <label for="nome">Número</label>
-                        <input type="text" id="i_numero" name="numero" placeholder="Ex:61 9 999-9999" required>
+                        <input type="tel" id="i_numero" name="numero" placeholder="Ex:61 9 999-9999" required>
                     </div>
                     <div class="botoes_modal">
                         <button class="botao_cancelar" type="button">Cancelar</button>
@@ -45,8 +42,8 @@
             </div>
         </dialog>
 
-        <section class="Caixa_de_contatos">
-            <div class="contatos">
+        <section class="caixa_de_contatos">
+            <div class="contato">
                 <div class="nome">
                     <h2>Fabio</h2>
                 </div>
@@ -61,9 +58,9 @@
 
                 <div class="botoes">
                     <button class="deletar">
-                        <span class="material-symbols-outlined">
+                       <span class="material-symbols-outlined">
                             delete_forever
-                        </span>
+                        </span> 
                     </button>
 
                     <button class="editar">
